@@ -1,0 +1,42 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+@import "variables";
+
+body {
+    background-color: $blue;
+    text-align: center;
+
+    div#wrapper {
+        font-family: $font-family-monospace;
+        background-color: lightblue;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+        header {
+            color: $white;
+
+
+
+        }
+    }
+}
+
+nav {
+    padding: $nav-link-padding-x $nav-link-padding-y;
+    background-color: white;
+    color: aqua;
+
+    ul#nav {
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        list-style-type: none; // thumbs up sign   "\1F44D"
+        li {
+            padding: 25px;
+        }
+    }
+}
+.progress {
+    margin: 15px;
+}
