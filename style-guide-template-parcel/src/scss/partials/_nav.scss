@@ -86,8 +86,13 @@ header {
 }
 
 #navigation > h3 {
-  background-color: $color-2;
-  color: $color-4;
+  
+  color: $color-2;
+  font-size: larger;
+  font-weight: 700;
+  //  ul > li {
+  //   color: $color-2;
+  // }
 
   
 }
