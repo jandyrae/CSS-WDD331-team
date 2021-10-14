@@ -85,14 +85,63 @@ header {
   }
 }
 
-#navigation > h3 {
-  
+#navigation>h3 {
+  font-family: $secondary-font;
   color: $color-2;
   font-size: larger;
   font-weight: 700;
-  //  ul > li {
-  //   color: $color-2;
-  // }
 
-  
+}
+
+.cd-primary-nav,
+.cd-secondary-nav,
+.cd-other-links {
+  li {
+    width: 200px;
+    display: block;
+    padding: 30px;
+    text-align: center;
+  }
+}
+
+.cd-primary-nav {
+  li {
+    background: $color-4;
+
+    a {
+      color: $color-2;
+    }
+
+    &:hover {
+      background: $color-1;
+    }
+  }
+}
+
+.cd-secondary-nav {
+  li {
+    background: $color-1;
+
+    a {
+      color: $color-3;
+    }
+
+    &:hover {
+      background: $color-4;
+    }
+  }
+}
+
+.cd-other-links {
+  li {
+    background: $color-2;
+
+    a {
+      color: $color-4;
+    }
+
+    &:hover {
+      background: $color-1;
+    }
+  }
 }
