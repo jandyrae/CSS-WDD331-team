@@ -21,3 +21,6 @@ node_modules
 
 #ignore build
 build
+
+# ignore parcel-cache
+.parcel-cache
