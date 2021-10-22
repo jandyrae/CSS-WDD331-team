@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/scss/svg.scss">
+    <title>svg</title>
+</head>
+
+<body>
+    <div class="card">
+        <svg>
+            <defs>
+                <symbol id="symbolA" viewBox="0 0 30 42" preserveAspectRatio="none">
+                    <rect width="420" height="42" />
+                    
+                </symbol>
+
+                <pattern id="pattern1" patternUnits="userSpaceOnUse" width="7.2" height="10">
+                    <g>
+                        <ellipse cx="4" cy="2" rx="7" ry="7"
+                            style="fill:rgb(255, 255, 255); stroke-width:2.5px; stroke:rgb(66, 2, 15)" />
+                        <ellipse cx="" cy="7" rx="2" ry="6" style="fill:rgb(211, 161, 143); z-index:-1" />
+                        <ellipse cx="7" cy="" rx="6" ry="2" style="fill:rgb(80, 156, 255)" />
+                        <ellipse cx="3" cy="" rx="15" ry="15" style="fill:rgb(176, 100, 226); opacity: 0.1; " />
+                       <g>
+                        <line x1="0" y1="100" style="stroke:darkseagreen; stroke-width:.25;" />
+                        <line x1="100" y1="0" style="stroke:darkseagreen; stroke-width:.25;" />
+                       </g>
+                    </g>
+                </pattern>
+                <pattern id="pattern2" patternUnits="userSpaceOnUse" width="3.57" height="5">
+                    <g>
+                        <circle cx="7.5" cy="7.5" r="7.5" fill="green" />
+                        <line x1="200" y1="30" x2="" y2="" style="stroke:rgb(11, 87, 150); stroke-width:.5" />
+                        <line x1="30" y1="200" x2="" y2="" style="stroke:rgb(11, 87, 150); stroke-width:.5" />
+                    </g>
+                </pattern>
+                <pattern id="pattern3" patternUnits="userSpaceOnUse" width="5" height="5">
+                    <g><circle cx="0" cy="2.5" r="2.5" fill="red" />
+                    <circle cx="2.5" cy="0" r="2.5" fill="yellow" />
+                </g>
+                    <polygon points="5,5 3,-3 1,1" style="fill:orange; stroke:dimgrey; stroke-width:.2px;" />
+                </pattern>
+            </defs>
+        </svg>
+    </div>
+    <div>
+        <figure>
+            <figcaption>pattern 1</figcaption>
+            <title>First Pattern</title>
+            <svg width="300" height="420" class="card rotate" >
+                <use xlink:href="#symbolA" fill="url(#pattern1)" />
+            </svg>
+        </figure>
+        <figure>
+            <figcaption>pattern 2</figcaption>
+            <title>Second Pattern</title>
+            <svg width="300" height="420" class="card">
+                <use xlink:href="#symbolA" fill="url(#pattern2)" />
+            </svg>
+        </figure>
+        <figure>
+            <figcaption>pattern 3</figcaption>
+            <title>Third Pattern</title>
+            <svg width="300" height="420" class="card">
+                <use xlink:href="#symbolA" fill="url(#pattern3)" />
+            </svg>
+        </figure>
+    </div>
+</body>
+
+</html>
