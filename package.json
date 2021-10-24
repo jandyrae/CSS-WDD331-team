@@ -4,10 +4,10 @@
   "description": "Boilerplate for a simple parcel based web app",
   "scripts": {
     "prestart": "rimraf build/*",
-    "start": "parcel serve src/testing.html --dist-dir build",
+    "start": "parcel serve src/svg.html --dist-dir build",
     "prebuild": "rimraf dist/*",
-    "build": "parcel build src/testing.html --public-url ./",
-    "watch": "parcel watch src/testing.html -d build/",
+    "build": "parcel build src/svg.html --public-url ./",
+    "watch": "parcel watch src/svg.html -d build/",
     "lint": "eslint src/**/*.js"
   },
   "author": "Shane T",

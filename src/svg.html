@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SVG</title>
+    <title>Border-Radius</title>
     <style>
         body {
             background-color: cadetblue;
-            padding: 50px;
+            padding: 150px;
         }
+
         header {
             padding-bottom: 100px;
         }
+
         .heart::before,
         .heart::after {
             position: absolute;
@@ -25,14 +28,14 @@
             transform: rotate(-45deg);
             transform-origin: 0 100%;
             box-shadow: darkblue;
-            left: 50px;
+            left: 200px;
         }
 
         .heart::after {
             transform: rotate(45deg);
             transform-origin: 100% 100%;
-            bottom: 100px;
-            left: 0px;
+            bottom: 100px ;
+            left: 150px;
         }
 
         .raindrop {
@@ -40,12 +43,13 @@
             width: 100px;
             background-color: aqua;
             border: 1px solid rgb(0, 102, 255);
-            /* border-top-left-radius: 0% 0%;
+            /* first number is horizontal, second is vertical */
+            border-top-left-radius: 0% 0%;
             border-top-right-radius: 100% 100%;
             border-bottom-right-radius: 100% 100%;
-            border-bottom-left-radius: 100% 100%; */
-            border-radius: 0% 100% 100% 100% / 100% 100% 100% 100%;
-            transform: rotate(45deg); 
+            border-bottom-left-radius: 100% 100%;
+            /* border-radius: 0% 100% 100% 100% / 0% 100% 100% 100%; */
+            transform: rotate(45deg);
         }
         div.infinityContainer {
             display: flex;
@@ -55,69 +59,81 @@
             width: 100%;
             position: relative;
         }
-div.raindrop.infinity {
-    transform: rotate(135deg);
-    border: 20px solid black;
-    background-color: cadetblue;
-}
 
-div.raindrop.infinity.flip  {
-    transform: rotate(312deg);
-    border: 20px solid black;
-    position: absolute;
-    margin-right: -330px;
-    background-color: cadetblue;
+        div.raindrop.infinity {
+            transform: rotate(135deg);
+            border: 20px solid black;
+            background-color: cadetblue;
+        }
 
-}
+        div.raindrop.infinity.flip {
+            transform: rotate(312deg);
+            border: 20px solid black;
+            position: absolute;
+            margin-right: -330px;
+            background-color: cadetblue;
+
+        }
 
         #space-invader {
-      box-shadow: 0 0 0 1em darkslateblue,
-      0 1em 0 1em darkslateblue,
-      -2.5em 1.5em 0 .5em darkslateblue,
-      2.5em 1.5em 0 .5em darkslateblue,
-      -3em -3em 0 0 darkslateblue,
-      3em -3em 0 0 darkslateblue,
-      -2em -2em 0 0 darkslateblue,
-      2em -2em 0 0 darkslateblue,
-      -3em -1em 0 0 darkslateblue,
-      -2em -1em 0 0 darkslateblue,
-      2em -1em 0 0 darkslateblue,
-      3em -1em 0 0 darkslateblue,
-      -4em 0 0 0 darkslateblue,
-      -3em 0 0 0 darkslateblue,
-      3em 0 0 0 darkslateblue,
-      4em 0 0 0 darkslateblue,
-      -5em 1em 0 0 darkslateblue,
-      -4em 1em 0 0 darkslateblue,
-      4em 1em 0 0 darkslateblue,
-      5em 1em 0 0 darkslateblue,
-      -5em 2em 0 0 darkslateblue,
-      5em 2em 0 0 darkslateblue,
-      -5em 3em 0 0 darkslateblue,
-      -3em 3em 0 0 darkslateblue,
-      3em 3em 0 0 darkslateblue,
-      5em 3em 0 0 darkslateblue,
-      -2em 4em 0 0 darkslateblue,
-      -1em 4em 0 0 darkslateblue,
-      1em 4em 0 0 darkslateblue,
-      2em 4em 0 0 darkslateblue;
-      background: darkslateblue;
-      width: 1em;
-      height: 1em;
-      overflow: hidden;
-      margin: 50px 0 70px 65px;
-    }
+            box-shadow: 0 0 0 1em darkslateblue,
+                0 1em 0 1em darkslateblue,
+                -2.5em 1.5em 0 .5em darkslateblue,
+                2.5em 1.5em 0 .5em darkslateblue,
+                -3em -3em 0 0 darkslateblue,
+                3em -3em 0 0 darkslateblue,
+                -2em -2em 0 0 darkslateblue,
+                2em -2em 0 0 darkslateblue,
+                -3em -1em 0 0 darkslateblue,
+                -2em -1em 0 0 darkslateblue,
+                2em -1em 0 0 darkslateblue,
+                3em -1em 0 0 darkslateblue,
+                -4em 0 0 0 darkslateblue,
+                -3em 0 0 0 darkslateblue,
+                3em 0 0 0 darkslateblue,
+                4em 0 0 0 darkslateblue,
+                -5em 1em 0 0 darkslateblue,
+                -4em 1em 0 0 darkslateblue,
+                4em 1em 0 0 darkslateblue,
+                5em 1em 0 0 darkslateblue,
+                -5em 2em 0 0 darkslateblue,
+                5em 2em 0 0 darkslateblue,
+                -5em 3em 0 0 darkslateblue,
+                -3em 3em 0 0 darkslateblue,
+                3em 3em 0 0 darkslateblue,
+                5em 3em 0 0 darkslateblue,
+                -2em 4em 0 0 darkslateblue,
+                -1em 4em 0 0 darkslateblue,
+                1em 4em 0 0 darkslateblue,
+                2em 4em 0 0 darkslateblue;
+            background: darkslateblue;
+            width: 1em;
+            height: 1em;
+            overflow: hidden;
+            margin: 50px 0 70px 65px;
+        }
     </style>
 </head>
+
 <body>
-    <header>SVG and CSS Border-Radius<hr></header>
-    <section class="heart"></section>
+    <header><h1>CSS Border-Radius</h1>
+        <hr>
+    </header>
+    
     <section class="raindrop"></section>
+
+
     <div class='infinityContainer'>
         <div class="raindrop infinity"></div>
         <div class="raindrop infinity flip"></div>
-    </div> 
-    <div class="rings"><div id="example2"></div><div id="example2 flip"></div></div>
+    </div>
+
+    <div class="rings">
+        <div id="example2"></div>
+        <div id="example2 flip"></div>
+    </div>
+    <div><section class="heart"></section></div>
     <div id="space-invader"></div>
 </body>
+
 </html>
