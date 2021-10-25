@@ -1,0 +1,58 @@
+
+/* -------------------------------- 
+
+xTypography 
+
+-------------------------------- */
+
+// fonts
+$primary-font: 'Montserrat', sans-serif;
+$secondary-font: 'Mountains of Christmas', cursive;
+
+
+h1,
+h2,
+h3 {
+  font-family: $secondary-font;
+  color: $color-2;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 300;
+  line-height: 1.2em;
+  margin: 0 0 0.4em;
+
+}
+
+h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 1.3em 0;
+}
+
+section > h2::before {
+  /* number before each section title */
+  color: darken($color-4, 15%);
+}
+
+p {
+  font-family: $primary-font;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: lighten($color-2, 25%);
+
+  a {
+    color: $color-6;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+
+}
+
+h3 {
+  color: $color-1;
+  font-size: 2.5em;
+}
