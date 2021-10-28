@@ -1,0 +1,62 @@
+// variables
+$card-width: 40vw;
+$card-height: 1.4 * $card-width;
+$font-size-number: $card-width * 0.1;
+$icon-size: $card-width / 5;
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 10px;
+}
+
+//styles to draw a basic outline of a card
+.card {
+    border: 1px solid grey;
+    height: $card-height;
+    width: $card-width;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 2px 2px 4px grey;
+}
+
+//set icon size
+.icon {
+    width: $icon-size;
+    height: $icon-size;
+}
+
+.number {
+    text-align: center;
+    font-size: $font-size-number;
+  //an icon that is part of a number should be half the normal size
+    & > .icon {
+        width: $icon-size * .5;
+        height: $icon-size *.5;
+    }
+}
+
+//rotate bottom pips 180deg
+.rotate.number.cell{
+    transform: rotate(180deg);
+}
+
+.card-front {
+display: grid;
+grid-template-columns: auto auto auto auto auto;
+
+}
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+   & div.cell {
+    flex:1;
+    text-align: center;
+    }
+    .cell svg {
+        align-content: center;
+    }
+   }

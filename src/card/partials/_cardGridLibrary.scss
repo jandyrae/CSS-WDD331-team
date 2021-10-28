@@ -1,0 +1,29 @@
+// Uses variables to create grid and spacing
+// grid variables 
+$num-columns : 8;
+$one-column : 100% / $num_columns;
+$loop-start: 1;
+$loop-end: ($num-columns+1);
+
+// mixins
+@mixin col($span-num) {
+    flex: 0 0 12.6% * $span-num;
+}
+
+@mixin offset($offset-num) {
+    margin-left: 12.5% * $offset-num;
+}
+
+//make column classes using mixins
+@for $index from $loop-start to $loop-end {
+    .col-#{$index} {
+        @include col($index);
+    }
+}
+
+//make offset classes using mixins
+@for $index from $loop-start to $loop-end {
+    .offset-#{$index} {
+        @include offset($index);
+    }
+}

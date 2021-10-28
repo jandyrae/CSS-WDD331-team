@@ -1,0 +1,29 @@
+@mixin grid($cols, $mrgn) {
+    float: left;
+    margin-right: $mrgn;
+    margin-bottom: $mrgn;
+    width: ((100% - (($cols - 1) * $mrgn)) / $cols);
+    &:nth-child(#{$cols}n) {
+        margin-right: 0;
+    }
+}
+div {
+    background-color: lightblue;
+}
+img {
+    width: 60%;
+    margin: 20px 20%
+}
+ul {
+    list-style: none;
+}
+li {
+    float: left;
+    box-sizing: border-box;
+    text-align: center;
+    width: (100% / 3);
+    @include grid(4,2%);
+    img {
+        width: 100%;
+    }
+}
