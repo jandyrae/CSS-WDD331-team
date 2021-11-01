@@ -3,3 +3,26 @@
 @import 'partials/colors';
 @import 'partials/layout';
 @import 'partials/typography';
+
+// @mixin grid($cols, $mrgn) {
+//     float: left;
+//     margin-right: $mrgn;
+//     margin-bottom: $mrgn;
+//     width: ((100% - (($cols - 1) * $mrgn)) / $cols);
+//     &:nth-child(#{$cols}n) {
+//         margin-right: 0;
+//     }
+// }
+div > div ul li  {
+    list-style: url('/zenGarden/src/images/Font_Awesome_5_regular_snowflake.svg');
+}
+// div.wrapper {
+//     float: left;
+//     box-sizing: border-box;
+//     text-align: center;
+//     width: 33%;
+//     @include grid(3,2%);
+//     & > div {
+//         width: 100%;
+//     }
+// }
