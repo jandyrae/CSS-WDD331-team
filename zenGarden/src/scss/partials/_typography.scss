@@ -15,6 +15,7 @@ h2,
 h3 {
   font-family: $secondary-font;
   color: $color-2;
+  text-shadow: 1px 1px darken($color-2, 45%);
 }
 
 h1 {
@@ -44,15 +45,23 @@ p {
 
   a {
     color: $color-6;
+    font-family: $secondary-font;
     font-size: 1.5em;
     font-weight: 700;
     text-decoration: none;
   }
-
-
 }
 
 h3 {
   color: $color-1;
   font-size: 2.5em;
+}
+//added for aside 11-2
+aside {
+  li {
+  font-family: $primary-font;
+  list-style-type: none; 
+  font-size: 1em;
+  font-weight: 500;
+  }
 }
