@@ -1,0 +1,539 @@
+@import 'typography';
+@import 'icons';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Open+Sans:wdth,wght@85,300&display=swap');
+
+$sm-break: 48em;
+// colors
+$dark-gray: #727272;
+$med-gray: #b4b3b5;
+$light-gray: #eaeaea;
+$body-font: #020202;
+$link-blue: #0076b6;
+$byui-blue: #056cb6;
+// fonts
+$textfamilyNarrow: 'Open Sans Condensed',
+sans-serif;
+$textfamily: 'Open Sans',
+sans-serif;
+
+// Utility classes
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+:root {
+  margin: 0;
+  font-family: $textfamily;
+}
+
+a {
+  color: $link-blue;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+#messageUs {
+  background-color: $link-blue;
+  content: '';
+  fill: $light-gray;
+  border-radius: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  height: 60px;
+  width: 60px;
+
+  img {
+    height: 35px;
+    width: 35px;
+  }
+}
+
+div.button {
+  background-color: $link-blue;
+  color: $light-gray;
+  border-radius: 5px;
+  width: 50%;
+  padding: 6px 24px;
+  font-weight: 700;
+  margin: auto;
+  text-align: center;
+}
+
+
+header>div {
+  background-color: $link-blue;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  justify-content: space-between;
+  align-items: stretch;
+
+  & div.site-banner__left {
+    width: 4em;
+    height: 4em;
+  }
+}
+
+div.site-banner__right {
+  height: min-content;
+
+  & a {
+    padding: 0;
+    margin: 0;
+  }
+
+  & img {
+    height: 90%;
+  }
+}
+
+div.top {
+  background-color: $light-gray;
+  color: $dark-gray;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  max-height: 5em;
+  justify-content: right;
+  border-bottom: 1px solid $med-gray;
+
+  & h1 {
+    font-size: 1.5em;
+    font-weight: 100;
+  }
+}
+
+div#covid {
+  display: flex;
+  flex-direction: column;
+  font-family: $textfamily;
+  background-color: $body-font;
+  color: $light-gray;
+  height: fit-content;
+  text-align: center;
+  box-sizing: content-box;
+
+  h3 {
+    font-size: 24px;
+    padding: 5px 0px;
+    margin: 5px 0px;
+  }
+
+  & div {
+    width: 55%;
+    font-size: 1.0em;
+  }
+}
+
+div#main-images div {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  width: 100%;
+  margin: auto;
+  border: 1px solid $med-gray;
+  color: $link-blue;
+
+  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+
+    a {
+      padding: 6px 12px;
+      font-size: 1em;
+      border: none;
+    }
+
+    span {
+      font-weight: 900;
+      padding-right: 20px;
+    }
+  }
+}
+
+div#dropdown {
+  margin: auto;
+  padding-bottom: 1em;
+
+  &>select {
+    background-color: $light-gray;
+    margin: 1px 10px;
+    width: 95%;
+    border: 1px solid $med-gray;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1em;
+    padding: 10px 10px;
+  }
+}
+
+aside {
+  border: 1px solid $dark-gray;
+  width: 80%;
+  height: fit-content;
+  margin: auto;
+  font-size: 1em;
+
+  & h3.resources {
+    background-color: $dark-gray;
+    color: $light-gray;
+    margin: 0;
+    line-height: 2.5em;
+    padding: 10px 20px;
+    font-weight: 800;
+  }
+
+  & div>div {
+    border-top: 1px solid $dark-gray;
+    padding: 8px 20px;
+    align-content: center;
+    line-height: 2em;
+    font-size: 1em;
+
+    a span {
+      float: right;
+      font-weight: 900;
+    }
+  }
+}
+
+div.resources.dates {
+  width: 90%;
+  margin: auto;
+  padding-top: 20px;
+  font-weight: 700;
+
+  & h3.highlights {
+    background-color: $link-blue;
+    color: $light-gray;
+    margin: 0;
+    line-height: 2em;
+    padding: 5px 20px;
+  }
+
+  a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    font-size: .8em;
+    color: $body-font;
+    padding: 8px 20px;
+    line-height: 1.3em;
+
+    & div.date {
+      font-weight: 700;
+      width: 25%;
+    }
+
+    & span {
+      width: 10%;
+    }
+
+    & div.topic {
+      width: 65%;
+      color: $body-font;
+      font-size: .8em;
+    }
+  }
+}
+
+#spacer {
+  border-top: 1px solid $med-gray;
+  height: 2em;
+}
+
+// news section (article)
+article {
+  width: 90%;
+  margin: auto;
+  border-top: 1px solid $med-gray;
+
+  div.row {
+    padding: 25px 0px;
+
+    div.hiddenImage {
+      display: none;
+    }
+
+    & div div.article-date {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: .8em;
+    }
+
+    h4 {
+      margin: 18px 0px 12px;
+    }
+
+    & div p.article {
+      font-family: $textfamilyNarrow;
+      line-height: 1em;
+    }
+  }
+}
+
+div.newsroom {
+  width: 100%;
+  padding-bottom: 35px;
+
+  div {
+    background-color: $link-blue;
+    border-radius: 5px;
+    width: 40%;
+    text-align: center;
+    padding: 5px;
+    margin-right: 20px;
+  }
+
+  a.float-right {
+    color: $light-gray;
+    text-align: center;
+    font-weight: 700;
+  }
+}
+
+div .devotional {
+  width: 90%;
+  margin: auto;
+  border: .5px solid $med-gray;
+  border-top: none;
+  padding-bottom: 10px;
+  font-weight: 900;
+
+  div#image {
+    background-color: $body-font;
+    border-radius: 6px 6px 0px 0;
+    display: flex;
+    justify-content: center;
+    height: 11em;
+
+    img {
+      width: 40%;
+    }
+  }
+
+  div.devotional-message {
+    width: 90%;
+    color: $link-blue;
+    padding: 10px 20px 0;
+  }
+
+  & p.devo-info {
+    padding: 0px 20px 0;
+  }
+
+  & p.devo-topic {
+    font-weight: 200;
+    padding: 0px 20px 0;
+  }
+
+  & div.button {
+    display: inline-block;
+    margin-left: 20px;
+  }
+}
+
+footer {
+  bottom: 0;
+  width: 100%;
+
+  & div#footImage {
+    height: 10em;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  & div#footImage::after {
+    background-color: $light-gray;
+    border-top: 1px solid $med-gray;
+    height: 5em;
+    border-bottom: 1 px solid #000;
+    content: "";
+
+  }
+
+  & img {
+    max-width: 14em;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+}
+
+@media (min-width: 40em) {
+  main {
+    margin: 0;
+    font-size: 1.5em;
+    width: 100%;
+  }
+
+  div#page-wrapper {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(21, 4.2%);
+    grid-template-rows: repeat(18, 5%);
+    column-gap: .5em;
+    row-gap: .5em;
+  }
+
+  div.top {
+    grid-column: 1/ end;
+    grid-row: 1/2;
+    justify-content: left;
+
+    & h1 {
+      padding-left: 20px;
+    }
+  }
+
+  div#covid {
+    width: 100%;
+    max-width: 1050px;
+    grid-column: 4/13;
+    grid-row: 2;
+    padding-bottom: 10px;
+    justify-content: center;
+  }
+
+  div#main-images {
+    grid-column: 4/13;
+    grid-row: 3 / 8;
+
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    grid-template-rows: repeat(6, 16.666%);
+    gap: 10px;
+
+    & div {
+      max-width: 1000px;
+      grid-column: 1/4;
+      grid-row: 1 /5;
+      margin-top: 10px;
+    }
+
+    & div#campusVideos {
+      max-width: 300px;
+      grid-column: 1/2;
+      grid-row: 6/7;
+    }
+
+    & div#gallery {
+      max-width: 300px;
+      grid-column: 2/3;
+      grid-row: 6/7;
+
+    }
+
+    & div#explore {
+      max-width: 300px;
+      grid-column: 3/4;
+      grid-row: 6/7;
+
+    }
+  }
+
+  div#dropdown {
+    width: 100%;
+    grid-column: 14/18;
+    grid-row: 2/2;
+  }
+
+  aside {
+    width: 100%;
+
+    grid-column: 14/18;
+    grid-row: 3/7;
+  }
+
+  div.resources.dates {
+    width: 100%;
+    padding: 0;
+    grid-column: 14/18;
+    grid-row: 8/8;
+  }
+
+  section {
+    grid-column: 4/18;
+    grid-row: 10/15;
+
+    & div#news {
+      display: grid;
+      grid-template-columns: repeat(3, 33%);
+      grid-template-rows: repeat(3, 33%);
+
+      div {
+        grid-column: 1/3;
+        grid-row: 1/2;
+      }
+
+      div.newsroom {
+        grid-column: 2/3;
+        grid-row: 4/4;
+
+        & div.button {
+          width: 35%;
+          margin: unset;
+        }
+      }
+
+      div.devotional {
+        grid-column: 3/4;
+        grid-row: 1/2;
+        width: 100%;
+        min-width: 480px;
+        margin-left: 50px;
+
+      }
+    }
+  }
+
+  article div.row {
+    display: flex;
+    flex-direction: row;
+
+    & div.hiddenImage {
+      display: flex;
+      align-items: center;
+      // width: 175px;
+      // height: 100px;
+      flex: 0 0 25%;
+
+      & img {
+        width: 160px;
+        height: 92px;
+      }
+    }
+  }
+
+}

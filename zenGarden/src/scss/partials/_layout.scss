@@ -6,7 +6,7 @@
     background-size: cover;
     background-color: $color-4;
     margin: 0;
-    padding: 2.5em;
+    padding: .5em;
 }
 
 .page-wrapper::before {
@@ -88,6 +88,7 @@ footer {
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
+    max-width: 40em; 
 }
 
 footer a {
@@ -230,6 +231,11 @@ div.participation {
         grid-template-columns: repeat(12, auto);
         grid-template-rows: repeat(8, 20em);
         gap: 20px
+    }
+    
+    footer {
+        max-width: 100%;
+        padding-bottom: 2.5em;
     }
 
     section#zen-intro.intro {

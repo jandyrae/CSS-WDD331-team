@@ -1,5 +1,5 @@
 @import 'partials/cardVariables';
-@import 'partials/cardGridLibrary.scss';
+@import 'partials/cardGridLibrary';
 
 *,
 *:before,
@@ -52,13 +52,18 @@
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    align-content: space-between;
+    justify-content: space-between;
     height: 100%;
 }
 
 .cell {
     flex: 1;
     text-align: center;
+    
+}
+div.row {
+    padding: 0;
+    margin: 0;
 }
 
 .offset-#{1} {
@@ -84,3 +89,78 @@
 .col-#{8} {
     @include col(8);
 }
+
+@supports (display: grid) {
+
+    //grid creation .row is container
+    .row {
+        display: grid;
+        grid-template-columns: repeat(8, 12.5%);
+        grid-template-rows: repeat(4, 25%);
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        justify-items: center;
+       
+    }
+
+    // top row
+    .cell.top {
+        grid-row: $top-row;
+        align-self: start;
+
+        &.number {
+            grid-column: 1/1;
+        }
+
+        &.one {
+            grid-column: 2/4;
+        }
+
+        &.two {
+            grid-column: 6/8;
+        }
+
+        //stand alone middle
+    }
+
+    .cell.three {
+        grid-column: 4/6;
+        grid-row: $secd-row;
+        align-self: center;
+    }
+
+    // bottom middle
+    .cell.middle {
+        grid-row: $third-row;
+        align-self: center;
+
+        &.four {
+            grid-column: 2/4;
+        }
+
+        &.five {
+            grid-column: 6/8;
+        }
+    }
+
+    // bottom row
+    .cell.bottom {
+        grid-row: $bottom-row;
+        align-self: end;
+
+        &.six {
+            grid-column: 2/4;
+        }
+
+        &.seven {
+            grid-column: 6/8;
+        }
+
+        &.rotate.number {
+            grid-column: 8;
+        }
+    }
+
+    
+    }

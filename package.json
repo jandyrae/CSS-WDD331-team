@@ -4,16 +4,17 @@
   "description": "Boilerplate for a simple parcel based web app",
   "scripts": {
     "prestart": "rimraf build/*",
-    "start": "parcel serve zenGarden/src/index.html --dist-dir build",
+    "start": "parcel serve rebuildSite/home.html --dist-dir build",
     "prebuild": "rimraf dist/*",
-    "build": "parcel build zenGarden/src/index.html --public-url ./",
-    "watch": "parcel watch zenGarden/src/index.html -d build/",
+    "build": "parcel build rebuildSite/home.html --public-url ./",
+    "watch": "parcel watch rebuildSite/home.html -d build/",
     "lint": "eslint src/**/*.js"
   },
   "author": "Shane T",
   "license": "GPL-2.0",
   "devDependencies": {
     "@babel/preset-env": "^7.14.7",
+    "@parcel/transformer-image": "^2.0.0-rc.0",
     "@parcel/transformer-sass": "^2.0.0-rc.0",
     "parcel": "next",
     "rimraf": "^3.0.2"

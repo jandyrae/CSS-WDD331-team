@@ -4,3 +4,14 @@ $card-height: 1.4 * $card-width;
 $font-size-number: $card-width * 0.1;
 $icon-size: $card-width * 0.2;
 
+
+// grid variables 
+$num-columns : 8;
+$one-column : 100% / $num_columns;
+$loop-start: 1;
+$loop-end: ($num-columns+1);
+
+$top-row: 1;
+$secd-row: 2;
+$third-row: 3;
+$bottom-row: 4;
