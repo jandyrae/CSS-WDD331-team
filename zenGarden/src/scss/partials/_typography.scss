@@ -7,7 +7,7 @@ xTypography
 
 // fonts
 $primary-font: 'Montserrat', sans-serif;
-$secondary-font: 'Mountains of Christmas', cursive;
+$secondary-font: 'Mountains of Christmas', 'cursive';
 
 
 h1,
@@ -15,7 +15,9 @@ h2,
 h3 {
   font-family: $secondary-font;
   color: $color-2;
-  text-shadow: 1px 1px darken($color-2, 45%);
+  // text-shadow: 1px 1px darken($color-2, 45%);
+   // text-shadow: -1px -1px 1px $white; // snow on letters to stand out
+  text-shadow: 2px -4px 6px $white;
 }
 
 h1 {
@@ -23,6 +25,7 @@ h1 {
   font-weight: 300;
   line-height: 1.2em;
   margin: 0 0 0.4em;
+  text-shadow: 2px 3px 5px darken($color-1, 20%);
 
 }
 
@@ -30,11 +33,12 @@ h2 {
   font-weight: bold;
   text-transform: uppercase;
   margin: 1.3em 0;
+  text-shadow: 2px 2px darken($color-1, 20%);
 }
 
 section > h2::before {
   /* number before each section title */
-  color: darken($color-4, 15%);
+  color: darken($color-4, 20%);
 }
 
 p {
@@ -44,18 +48,23 @@ p {
   color: lighten($color-2, 25%);
 
   a {
-    color: $color-6;
+    // color: $color-6;
+    color: darken($color-6, 7%);
     font-family: $secondary-font;
-    font-size: 1.5em;
+    text-shadow: .8px .8px 3px $white;
+    font-size: 1.3em;
     font-weight: 700;
     text-decoration: none;
   }
 }
 
 h3 {
-  color: $color-1;
+  // color: $color-1;
+  color: darken($color-1, 20%);
   font-size: 2.5em;
+  font-weight: 700;
 }
+
 //added for aside 11-2
 aside {
   li {

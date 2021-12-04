@@ -1,0 +1,51 @@
+
+// this is the hamburger menu setup 
+div.menu-icon {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    padding: 1em;
+    transition: 1s ease-in-out;
+    width: fit-content;
+    &::before,
+    &::after {
+        content: "";
+        display: block;
+        width: 40px;
+        height: 4px;
+        background-color: #fff;
+        margin: 10px 0;
+        border-radius: 5px;
+        transition: 1s;
+    }
+
+    span {
+        display: block;
+        width: 40px;
+        height: 4px;
+        background-color: #fff;
+        transition: .3s;
+        border-radius: 5px;
+    }
+}
+
+// when open is toggled  the middle bar disappears and the other two animate cross
+// top one flips first for fun
+div.menu-icon.open {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: 1s ease-in-out;
+
+    &::before {
+        transform: rotate(315deg) translate(-10px, 10px);
+    }
+
+    &::after {
+        transform: rotate(45deg) translate(-10px, -9px);
+    }
+
+    span {
+        opacity: 0;
+    }
+}

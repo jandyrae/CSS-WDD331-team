@@ -1,0 +1,226 @@
+html,
+body {
+    height: 100%;
+    background-color: darkslategray;
+    box-sizing: border-box;
+}
+
+div#wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .box {
+        height: 24vmin;
+        width: 24vmin;
+        background-color: teal;
+        display: flex;
+        padding: 1vmin;
+
+        .circle {
+            // border-radius: 50%;
+            background-color: salmon;
+            // height: 5vmin;
+            // width: 5vmin;
+        }
+    }
+}
+
+@keyframes orbit {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(380%, 0%);
+    }
+
+    50% {
+        transform: translate(380%, 380%);
+    }
+
+    75% {
+        transform: translate(0%, 380%);
+    }
+
+    100% {
+        transform: translate(0%, 0%);
+    }
+}
+
+.circle.circumnavigate {
+    border-radius: 50%;
+    height: 5vmin;
+    width: 5vmin;
+    animation: orbit 4s linear infinite;
+}
+
+
+
+@keyframes morphing {
+    0% {
+        border-radius: 50%;
+    }
+
+    25% {
+        border-radius: 50%;
+        background-color: salmon;
+    }
+
+    50% {
+        border-radius: 0%;
+        background-color: white;
+        transform: rotate(0deg);
+    }
+
+    75% {
+        border-radius: 0%;
+        background-color: white;
+        transform: rotate(90deg);
+    }
+
+    100% {
+        border-radius: 50%;
+        background-color: salmon;
+        transform: rotate(90deg);
+    }
+}
+
+.box.two {
+    justify-content: center;
+    align-items: center;
+
+    .circle.morph-square {
+        height: 5vmin;
+        width: 5vmin;
+        animation: morphing 3s linear infinite;
+    }
+}
+
+@keyframes splitting-left {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(-100%, 0);
+    }
+
+    50% {
+        transform: translate(0, 0);
+    }
+
+    75% {
+        transform: translate(-100%, 0);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes splitting-right {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(100%, 0);
+    }
+
+    50% {
+        transform: translate(0, 0);
+    }
+
+    75% {
+        transform: translate(100%, 0);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.box.three {
+    justify-content: center;
+    align-items: center;
+
+    div.circle.split.left {
+        height: 5vmin;
+        width: 2.5vmin;
+        border-radius: 100% 0 0 100% / 50% 0 0 50%;
+        animation: splitting-left 3s 1s linear infinite;
+    }
+
+    div.circle.split.right {
+        height: 5vmin;
+        width: 2.5vmin;
+        border-radius: 0 100% 100% 0 /0 50% 50% 0;
+        animation: splitting-right 3s 1s linear infinite;
+        // animation-direction: reverse;
+        // animation-duration: 3s;
+        // animation-iteration-count: infinite;
+        // animation-name: 'splitting-left';
+    }
+}
+
+@keyframes beating {
+    0% {
+        transform: scale(1);
+    }
+    10% {
+        transform: scale(1.2);
+    }
+    12% {
+        transform: scale(1);
+    }
+    20% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(1.2);
+    }
+    32% {
+        transform: scale(1);
+    }
+    40% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1);
+    }
+    60% {
+        transform: scale(1);
+    }
+    70% {
+        transform: scale(1.2);
+    }
+    72% {
+        transform: scale(1);
+    }
+    80% {
+        transform: scale(1.2);
+    }
+    85% {
+        transform: scale(1);
+    }
+    90% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.box.four {
+    justify-content: center;
+    align-items: center;
+
+    .circle.beating {
+        height: 5vmin;
+        width: 5vmin;
+        border-radius: 50%;
+        animation: beating 3s 1s linear infinite;
+    }
+}

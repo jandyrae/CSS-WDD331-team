@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style.scss">
+    <title>Menu Slider</title>
+</head>
+
+<body>
+
+    <aside id="slideout" onclick="whenClicked();">
+        <div class="menu-icon" id="menu-icon" onclick="toggleNav();">
+            <span></span>
+        </div>
+        <div id="linkHolder" class="slideout">
+            <div id="linkWrapper">
+                <div id="links">
+                    <ul>
+                        <li><a href="#">Item One</a></li>
+                        <li> <a href="#">Item Two</a></li>
+                        <li> <a href="#">Item Three</a></li>
+                        <li> <a href="#">Item Four</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <div class="background">
+        <h1>Animated Sliding Menu</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus eum dolorem recusandae soluta quae,
+            laboriosam consequatur harum aspernatur quasi ducimus quibusdam cupiditate eaque tempora corrupti quia.
+            Explicabo autem repellat porro.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore, repudiandae deleniti sed tenetur
+            quasi a laudantium placeat dolorum, natus et ab odio commodi quia nemo quam sapiente magni excepturi
+            nihil.</p>
+    </div>
+</body>
+<script>
+    function toggleNav() {
+        var updateElement = document.getElementById("menu-icon");
+        //toggle adds a class if it's not there or removes it if it is.
+        updateElement.classList.toggle("open");
+    }
+
+    function whenClicked() {
+        var slide = document.getElementById("slideout");
+        slide.classList.toggle("slide");
+    }
+</script>
+
+</html>
